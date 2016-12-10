@@ -108,6 +108,18 @@ $ vim external-script.json
 [ "hubot-rss-reader" ]
 ```
 
+```bash
+@herokubot: help
+@herokubot: rss add https://www.archlinuxjp.org/feeds/news.xml
+```
+
+- [google-search](https://developers.google.com/custom-search/docs/overview)
+
+```bash
+$ heroku config:add HUBOT_GOOGLE_CSE_KEY=""
+$ heroku config:add HUBOT_GOOGLE_CSE_ID=""
+```
+
 - [toshimaru/hubot-docomochatter](https://github.com/toshimaru/hubot-docomochatter)
 
 ```bash
@@ -120,9 +132,4 @@ $ heroku config:add DOCOMO_API_KEY=""
 
 - [gas-cronsheet-slack](https://github.com/motemen/gas-cronsheet-slack)
 
-## RSS Feeds
-
-```bash
-@herokubot: rss add https://www.archlinuxjp.org/feeds/news.xml
-```
 
