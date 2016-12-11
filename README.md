@@ -132,4 +132,41 @@ $ heroku config:add DOCOMO_API_KEY=""
 
 - [gas-cronsheet-slack](https://github.com/motemen/gas-cronsheet-slack)
 
+## other
 
+その他、slackに追加した機能について記述します。botとは無関係です。
+
+### travis 
+
+slack -> app -> travis-ci
+
+```bash
+$ rvm install 2.0
+$ rvm use 2.0
+$ gem i travis
+$ travis login
+$ travis encrypt -r owner/repos "domain:token" --add notifications.slack
+```
+
+> .travis.yml
+
+```yml
+notifications:
+  slack:
+    secure: XXXX
+```
+
+### wercker-webhook
+
+slack -> app -> webhook
+
+> wercker.yml
+
+```yml
+  after-steps:
+    - slack-notifier:
+         url: $SLACK_WEBHOOK_URL
+         channel: private
+         username: wercker
+         branch: master
+```
