@@ -15,7 +15,7 @@ deploy:
   after-steps:
     - slack-notifier:
          url: $SLACK_WEBHOOK_URL
-         channel: private
+         channel: repository
          username: wercker
          branch: master
 
